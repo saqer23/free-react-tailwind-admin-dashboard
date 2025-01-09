@@ -16,6 +16,8 @@ import Tables from './pages/Tables';
 import Alerts from './pages/UiElements/Alerts';
 import Buttons from './pages/UiElements/Buttons';
 import DefaultLayout from './layout/DefaultLayout';
+import StationTable from './pages/stations/view/index';
+import StationForm from './pages/stations/form/index';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -43,6 +45,26 @@ function App() {
             </>
           }
         />
+        {/* my work */}
+        <Route
+          path="/stations"
+          element={
+            <>
+              <PageTitle title="Station list" />
+              <StationTable />
+            </>
+          }
+        />
+        <Route
+          path="/stations/form"
+          element={
+            <>
+              <PageTitle title="Station list" />
+              <StationForm />
+            </>
+          }
+        />
+        {/* end my work */}
         <Route
           path="/calendar"
           element={

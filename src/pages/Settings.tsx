@@ -1,7 +1,22 @@
 import Breadcrumb from '../components/Breadcrumbs/Breadcrumb';
 import userThree from '../images/user/user-03.png';
-
+import { useState } from 'react';
 const Settings = () => {
+  const [image, setImage] = useState<string | null>(null);
+  const handleFileChange = (event: any) => {
+    console.log(event);
+
+    const file = event.target.files[0];
+    if (file) {
+      // Check if the file is an image
+      if (file.type.startsWith('image/')) {
+        setImage(URL.createObjectURL(file)); // Display the image
+        // You can also upload the file here if needed
+      } else {
+        alert('Please select a valid image file.');
+      }
+    }
+  };
   return (
     <>
       <div className="mx-auto max-w-270">
@@ -245,6 +260,7 @@ const Settings = () => {
                       type="file"
                       accept="image/*"
                       className="absolute inset-0 z-50 m-0 h-full w-full cursor-pointer p-0 opacity-0 outline-none"
+                      onChange={handleFileChange}
                     />
                     <div className="flex flex-col items-center justify-center space-y-3">
                       <span className="flex h-10 w-10 items-center justify-center rounded-full border border-stroke bg-white dark:border-strokedark dark:bg-boxdark">
@@ -281,6 +297,13 @@ const Settings = () => {
                       </p>
                       <p className="mt-1.5">SVG, PNG, JPG or GIF</p>
                       <p>(max, 800 X 800px)</p>
+                      {image && (
+                        <img
+                          src={image}
+                          alt="Selected"
+                          className="mt-3 max-w-[200px] max-h-[200px] rounded"
+                        />
+                      )}
                     </div>
                   </div>
 

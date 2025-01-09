@@ -4,7 +4,8 @@
 
 @layer base {
   body {
-    @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1;
+    @apply font-satoshi font-normal text-base text-body bg-whiten relative z-1 rtl;
+    direction: rtl;
   }
 }
 
@@ -27,6 +28,16 @@
   }
   .inbox-height {
     @apply h-[calc(100vh_-_8.125rem)] lg:h-[calc(100vh_-_5.625rem)];
+  }
+
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* Move scrollbar to the right side for RTL */
+  body.rtl {
+    scrollbar-gutter: stable both-edges;
   }
 }
 
@@ -117,7 +128,9 @@ span.flatpickr-weekday,
 }
 .flatpickr-day.inRange {
   @apply dark:!shadow-7;
-  box-shadow: -5px 0 0 #EFF4FB, 5px 0 0 #EFF4FB;
+  box-shadow:
+    -5px 0 0 #eff4fb,
+    5px 0 0 #eff4fb;
 }
 .flatpickr-day.inRange,
 .flatpickr-day.prevMonthDay.inRange,
@@ -212,4 +225,24 @@ span.flatpickr-weekday,
 
 [x-cloak] {
   display: none !important;
+}
+
+/* RTL-specific styles */
+.rtl .map-btn .jvm-zoom-btn {
+  @apply left-0;
+}
+.rtl .mapOne .jvm-zoom-btn.jvm-zoomin {
+  @apply left-10;
+}
+.rtl .mapOne .jvm-zoom-btn.jvm-zoomout {
+  @apply left-0;
+}
+.rtl .mapTwo .jvm-zoom-btn.jvm-zoomin {
+  @apply right-0;
+}
+.rtl .mapTwo .jvm-zoom-btn.jvm-zoomout {
+  @apply right-10;
+}
+.rtl .taskCheckbox:checked ~ p {
+  text-align: right;
 }

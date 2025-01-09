@@ -4,7 +4,7 @@ import Breadcrumb from '../../components/Breadcrumbs/Breadcrumb';
 
 const Buttons = () => {
   return (
-    <>
+    <div dir="rtl">
       <Breadcrumb pageName="Buttons" />
 
       {/* <!-- Normal Button Items --> */}
@@ -464,7 +464,7 @@ const Buttons = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

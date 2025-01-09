@@ -18,7 +18,7 @@ const DropdownNotification = () => {
           className="relative flex h-8.5 w-8.5 items-center justify-center rounded-full border-[0.5px] border-stroke bg-gray hover:text-primary dark:border-strokedark dark:bg-meta-4 dark:text-white"
         >
           <span
-            className={`absolute -top-0.5 right-0 z-1 h-2 w-2 rounded-full bg-meta-1 ${
+            className={`absolute -top-0.5 left-0 z-1 h-2 w-2 rounded-full bg-meta-1 ${
               notifying === false ? 'hidden' : 'inline'
             }`}
           >
@@ -42,76 +42,73 @@ const DropdownNotification = () => {
 
         {dropdownOpen && (
           <div
-            className={`absolute -right-27 mt-2.5 flex h-90 w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:right-0 sm:w-80`}
+            className={`absolute -left-27 mt-2.5 flex h-90 w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:left-0 sm:w-80`}
           >
-            <div className="px-4.5 py-3">
-              <h5 className="text-sm font-medium text-bodydark2">
-                Notification
-              </h5>
+            <div className="px-4.5 py-3 text-right">
+              <h5 className="text-sm font-medium text-bodydark2">الإشعارات</h5>
             </div>
 
             <ul className="flex h-auto flex-col overflow-y-auto">
               <li>
                 <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4 text-right"
                   to="#"
                 >
                   <p className="text-sm">
                     <span className="text-black dark:text-white">
-                      Edit your information in a swipe
+                      عدّل معلوماتك بسهولة
                     </span>{' '}
-                    Sint occaecat cupidatat non proident, sunt in culpa qui
-                    officia deserunt mollit anim.
+                    بعض النصوص هنا لوصف الإشعار للمستخدمين.
                   </p>
 
-                  <p className="text-xs">12 May, 2025</p>
+                  <p className="text-xs">12 مايو, 2025</p>
                 </Link>
               </li>
               <li>
                 <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4 text-right"
                   to="#"
                 >
                   <p className="text-sm">
                     <span className="text-black dark:text-white">
-                      It is a long established fact
+                      حقيقة طويلة معروفة
                     </span>{' '}
-                    that a reader will be distracted by the readable.
+                    أن القارئ سيتشتت بالنصوص المقروءة.
                   </p>
 
-                  <p className="text-xs">24 Feb, 2025</p>
+                  <p className="text-xs">24 فبراير, 2025</p>
                 </Link>
               </li>
               <li>
                 <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4 text-right"
                   to="#"
                 >
                   <p className="text-sm">
                     <span className="text-black dark:text-white">
-                      There are many variations
+                      هناك العديد من الأشكال
                     </span>{' '}
-                    of passages of Lorem Ipsum available, but the majority have
-                    suffered
+                    المختلفة لنصوص لوريم إيبسوم المتاحة، ولكن الأغلبية تعرضت
+                    لتغيير.
                   </p>
 
-                  <p className="text-xs">04 Jan, 2025</p>
+                  <p className="text-xs">04 يناير, 2025</p>
                 </Link>
               </li>
               <li>
                 <Link
-                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
+                  className="flex flex-col gap-2.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4 text-right"
                   to="#"
                 >
                   <p className="text-sm">
                     <span className="text-black dark:text-white">
-                      There are many variations
+                      هناك العديد من الأشكال
                     </span>{' '}
-                    of passages of Lorem Ipsum available, but the majority have
-                    suffered
+                    المختلفة لنصوص لوريم إيبسوم المتاحة، ولكن الأغلبية تعرضت
+                    لتغيير.
                   </p>
 
-                  <p className="text-xs">01 Dec, 2024</p>
+                  <p className="text-xs">01 ديسمبر, 2024</p>
                 </Link>
               </li>
             </ul>

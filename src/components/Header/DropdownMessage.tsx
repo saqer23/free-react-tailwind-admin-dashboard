@@ -23,7 +23,7 @@ const DropdownMessage = () => {
           to="#"
         >
           <span
-            className={`absolute -top-0.5 -right-0.5 z-1 h-2 w-2 rounded-full bg-meta-1 ${
+            className={`absolute -top-0.5 -left-0.5 z-1 h-2 w-2 rounded-full bg-meta-1 ${
               notifying === false ? 'hidden' : 'inline'
             }`}
           >
@@ -59,11 +59,9 @@ const DropdownMessage = () => {
 
         {/* <!-- Dropdown Start --> */}
         {dropdownOpen && (
-          <div
-            className={`absolute -right-16 mt-2.5 flex h-90 w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:right-0 sm:w-80`}
-          >
+          <div className="absolute -left-16 mt-2.5 flex h-90 w-75 flex-col rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark sm:left-0 sm:w-80">
             <div className="px-4.5 py-3">
-              <h5 className="text-sm font-medium text-bodydark2">Messages</h5>
+              <h5 className="text-sm font-medium text-bodydark2">الرسائل</h5>
             </div>
 
             <ul className="flex h-auto flex-col overflow-y-auto">
@@ -76,12 +74,12 @@ const DropdownMessage = () => {
                     <img src={UserTwo} alt="User" />
                   </div>
 
-                  <div>
+                  <div className="text-right">
                     <h6 className="text-sm font-medium text-black dark:text-white">
-                      Mariya Desoja
+                      ماريا ديسوجا
                     </h6>
-                    <p className="text-sm">I like your confidence 💪</p>
-                    <p className="text-xs">2min ago</p>
+                    <p className="text-sm">أحب ثقتك 💪</p>
+                    <p className="text-xs">منذ دقيقتين</p>
                   </div>
                 </Link>
               </li>
@@ -94,12 +92,12 @@ const DropdownMessage = () => {
                     <img src={UserOne} alt="User" />
                   </div>
 
-                  <div>
+                  <div className="text-right">
                     <h6 className="text-sm font-medium text-black dark:text-white">
-                      Robert Jhon
+                      روبرت جون
                     </h6>
-                    <p className="text-sm">Can you share your offer?</p>
-                    <p className="text-xs">10min ago</p>
+                    <p className="text-sm">هل يمكنك مشاركة عرضك؟</p>
+                    <p className="text-xs">منذ 10 دقائق</p>
                   </div>
                 </Link>
               </li>
@@ -112,12 +110,12 @@ const DropdownMessage = () => {
                     <img src={UserThree} alt="User" />
                   </div>
 
-                  <div>
+                  <div className="text-right">
                     <h6 className="text-sm font-medium text-black dark:text-white">
-                      Henry Dholi
+                      هنري دهولي
                     </h6>
-                    <p className="text-sm">I cam across your profile and...</p>
-                    <p className="text-xs">1day ago</p>
+                    <p className="text-sm">لقد وجدت ملفك الشخصي...</p>
+                    <p className="text-xs">منذ يوم واحد</p>
                   </div>
                 </Link>
               </li>
@@ -130,30 +128,12 @@ const DropdownMessage = () => {
                     <img src={UserFour} alt="User" />
                   </div>
 
-                  <div>
+                  <div className="text-right">
                     <h6 className="text-sm font-medium text-black dark:text-white">
-                      Cody Fisher
+                      كودي فيشر
                     </h6>
-                    <p className="text-sm">I’m waiting for you response!</p>
-                    <p className="text-xs">5days ago</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  className="flex gap-4.5 border-t border-stroke px-4.5 py-3 hover:bg-gray-2 dark:border-strokedark dark:hover:bg-meta-4"
-                  to="/messages"
-                >
-                  <div className="h-12.5 w-12.5 rounded-full">
-                    <img src={UserTwo} alt="User" />
-                  </div>
-
-                  <div>
-                    <h6 className="text-sm font-medium text-black dark:text-white">
-                      Mariya Desoja
-                    </h6>
-                    <p className="text-sm">I like your confidence 💪</p>
-                    <p className="text-xs">2min ago</p>
+                    <p className="text-sm">أنا في انتظار ردك!</p>
+                    <p className="text-xs">منذ 5 أيام</p>
                   </div>
                 </Link>
               </li>
